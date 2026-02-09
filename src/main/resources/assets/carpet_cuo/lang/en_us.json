@@ -1,0 +1,31 @@
+{
+  "carpet.rule.maxChainDepth.name": "maxChainDepth",
+  "carpet.rule.infinitelyVault.name": "infinitelyVault",
+  "carpet.rule.comparatorDupeFix.name": "comparatorDupeFix",
+  "carpet.rule.maxUpdateDepth.name": "maxUpdateDepth",
+  "carpet.rule.useLeavesAndMossAsFuel.name": "leavesAndMossAsFuel",
+  "carpet.rule.infinitelyTotem.name": "infinitelyTotem",
+  "carpet.rule.noEnchantmentLevelLimit.name": "noEnchantmentLevelLimit",
+  "carpet.rule.noTooExpensive.name": "noTooExpensive",
+  "carpet.rule.showChainUpdateDepth.name": "showChainUpdateDepth",
+  "carpet.rule.copperGolemFix.name": "copperGolemFix",
+  "carpet.rule.blockEntitySwapReintroduced.name": "blockEntitySwapReintroduced",
+
+  "carpet.rule.maxChainDepth.desc": "max chain depth",
+  "carpet.rule.infinitelyVault.desc": "Players can open an unlimited number of vaults",
+  "carpet.rule.comparatorDupeFix.desc": "comparator dupe fix",
+  "carpet.rule.maxUpdateDepth.desc": "max update depth",
+  "carpet.rule.useLeavesAndMossAsFuel.desc": "Now leaves and moss can be used as fuel",
+  "carpet.rule.infinitelyTotem.desc": "infinitely totem",
+  "carpet.rule.noEnchantmentLevelLimit.desc": "no enchantment level limit",
+  "carpet.rule.noTooExpensive.desc": "Never worry about being too expensive again",
+  "carpet.rule.showChainUpdateDepth.desc": "When the depth of the update chain reaches 100,000, it will be displayed in the chat bar",
+  "carpet.rule.copperGolemFix.desc": "Copper golems do not turn into statues in the air",
+  "carpet.rule.blockEntitySwapReintroduced.desc": "Block entity swap reintroduced",
+
+  "carpet.rule.infinitelyVault.extra.0": "This only applies to vaults the  player has not yet opened",
+  "carpet.rule.infinitelyTotem.extra.0": "Using a totem is not consumed",
+  "carpet.rule.useLeavesAndMossAsFuel.extra.0": "Note: 1.21.2+ requires a server restart for change to take effect",
+  "carpet.rule.comparatorDupeFix.extra.0": "Fix the comparator item duplication glitch",
+  "carpet.rule.noEnchantmentLevelLimit.extra.0": "Enchantment level can reach 225 and it is recommended to use the noTooExpensive function"
+}

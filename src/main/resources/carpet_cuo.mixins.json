@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "package": "carpet_cuo.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AnvilScreenHandlerMixin",
+    "ChainRestrictedNeighborUpdaterMixin",
+    "BlockEntitySwapReintroducedMixin.BlockEntityMixin",
+    "BlockEntitySwapReintroducedMixin.WorldChunkMixin",
+    "ComparatorDupeFixMixin.ComparatorBlockMixin",
+    "CopperGolemMixin.CopperGolemEntityMixin",
+    "InfinitelyTotemMixin.LivingEntityMixin",
+    "InfinitelyVaultMixin.VaultServerDateMixin",
+    "MaxUpdateDepthMixin.WorldMixin",
+    "UseLeavesAndMossAsFuleMixin.FurnaceBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+    "AnvilScreenMixin"
+  ]
+}
