@@ -7,16 +7,13 @@ import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(LivingEntity.class)
-public class LivingEntityMixin {
+public abstract class LivingEntityMixin {
     @ModifyConstant(
             method = "tryUseDeathProtector",
             constant = @Constant(intValue = 1,ordinal = 0)
     )
     private int setAmount(int original){
-        if (Carpet_CuOSettings.infinitelyTotem){
-            return 0;
-        }else {
-            return original;
-        }
+        if (Carpet_CuOSettings.infinitelyTotem)return 0;
+        else return original;
     }
 }

@@ -7,16 +7,13 @@ import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(VaultServerData.class)
-public class VaultServerDateMixin {
+public abstract class VaultServerDateMixin {
     @ModifyConstant(
             method = "markPlayerAsRewarded",
             constant = @Constant(intValue = 128)
     )
     private int modifyRewardedPlayersSize(int original){
-        if (Carpet_CuOSettings.infinitelyVault){
-            return 0;
-        }else {
-            return original;
-        }
+        if (Carpet_CuOSettings.infinitelyVault)return 0;
+        else return original;
     }
 }

@@ -9,21 +9,19 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 //#if MC >= 1.21.5
 //$$@Mixin(BlockEntity.class)
-//$$public class BlockEntityMixin {
+//$$public abstract class BlockEntityMixin {
 //$$}
 //#endif
 //#if MC <= 1.21.4
 @Mixin(BlockEntity.class)
-public class BlockEntityMixin {
+public abstract class BlockEntityMixin {
     @Inject(
             method = "validateSupports",
             at = @At("HEAD"),
             cancellable = true
     )
     private void skipValidateSupports(CallbackInfo ci){
-        if (Carpet_CuOSettings.blockEntitySwapReintroduced){
-            ci.cancel();
-        }
+        if (Carpet_CuOSettings.blockEntitySwapReintroduced)ci.cancel();
     }
 }
 //#endif

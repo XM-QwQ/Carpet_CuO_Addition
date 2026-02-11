@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(AnvilScreenHandler.class)
-public class AnvilScreenHandlerMixin {
+public abstract class AnvilScreenHandlerMixin {
     @Redirect(
             method = "updateResult",
             at = @At(
@@ -20,21 +20,15 @@ public class AnvilScreenHandlerMixin {
             )
     )
     private int RedirectMaxEnchantLevel(Enchantment enchantment) {
-        if (Carpet_CuOSettings.noEnchantmentLevelLimit){
-            return 114514;
-        }else {
-            return enchantment.getMaxLevel();
-        }
+        if (Carpet_CuOSettings.noEnchantmentLevelLimit)return Integer.MAX_VALUE;
+        else return enchantment.getMaxLevel();
     }
     @ModifyConstant(
             method = "updateResult",
             constant = @Constant(intValue = 40,ordinal = 2)
     )
     private int setLevelCost(int original){
-        if (Carpet_CuOSettings.noTooExpensive){
-            return 2147483647;
-        }else {
-            return original;
-        }
+        if (Carpet_CuOSettings.noTooExpensive)return Integer.MAX_VALUE;
+        else return original;
     }
 }

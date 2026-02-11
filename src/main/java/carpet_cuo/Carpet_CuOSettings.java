@@ -55,4 +55,7 @@ public class Carpet_CuOSettings {
     @Rule(categories = {CuO,CREATIVE,FEATURE})
     public static boolean blockEntitySwapReintroduced = false;
     //#endif
+
+    @Rule(categories = {CuO,CREATIVE,NOT_VANILLA})
+    public static boolean endPortalFrameCanBeMined = false;
 }

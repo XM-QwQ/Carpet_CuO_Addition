@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(FurnaceBlock.class)
-public class FurnaceBlockMixin {
+public abstract class FurnaceBlockMixin {
     @Inject(
             method = "openScreen",
             at = @At(value = "HEAD")

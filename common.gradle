@@ -167,3 +167,8 @@ publishing {
 	repositories {
 	}
 }
+fabricApi {
+	configureDataGeneration() {
+		client = true
+	}
+}

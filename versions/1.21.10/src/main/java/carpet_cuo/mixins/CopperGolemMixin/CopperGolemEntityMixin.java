@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(CopperGolemEntity.class)
-public class CopperGolemEntityMixin {
+public abstract class CopperGolemEntityMixin {
     @Inject(
             method = "turnIntoStatue",
             at = @At("HEAD"),
@@ -22,8 +22,6 @@ public class CopperGolemEntityMixin {
         BlockPos blockPos = copperGolemEntity.getBlockPos().down();
         World world = copperGolemEntity.getEntityWorld();
         BlockState blockState = world.getBlockState(blockPos);
-        if (Carpet_CuOSettings.copperGolemFix && blockState.isAir()) {
-            ci.cancel();
-        }
+        if (Carpet_CuOSettings.copperGolemFix && blockState.isAir())ci.cancel();
     }
 }

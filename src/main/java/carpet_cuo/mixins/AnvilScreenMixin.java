@@ -7,13 +7,13 @@ import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(AnvilScreen.class)
-public class AnvilScreenMixin {
+public abstract class AnvilScreenMixin {
     @ModifyConstant(
             method = "drawForeground",
             constant = @Constant(intValue = 40)
     )
     private int clientRendering(int original){
-        if (Carpet_CuOSettings.noTooExpensive) return 2147483647;
+        if (Carpet_CuOSettings.noTooExpensive) return Integer.MAX_VALUE;
         else return original;
     }
 }

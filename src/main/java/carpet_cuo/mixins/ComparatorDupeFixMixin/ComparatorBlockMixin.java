@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ComparatorBlock.class)
-public class ComparatorBlockMixin {
+public abstract class ComparatorBlockMixin {
     @Inject(
             method = "update",
             at = @At(
@@ -22,8 +22,6 @@ public class ComparatorBlockMixin {
             cancellable = true
     )
     private void ComparatorDupeFix(World world, BlockPos pos, BlockState state, CallbackInfo ci){
-        if (Carpet_CuOSettings.comparatorDupeFix && world.isAir(pos)){
-            ci.cancel();
-        }
+        if (Carpet_CuOSettings.comparatorDupeFix && world.isAir(pos))ci.cancel();
     }
 }

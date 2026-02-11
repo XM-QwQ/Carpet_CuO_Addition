@@ -12,6 +12,7 @@
   "carpet.rule.showChainUpdateDepth.name": "显示连锁更新深度",
   "carpet.rule.copperGolemFix.name": "铜傀儡不会在空中变为雕像",
   "carpet.rule.blockEntitySwapReintroduced.name": "重新引入方块实体替换",
+  "carpet.rule.endPortalFrameCanBeMined.name": "可挖掘末地传送门框",
 
   "carpet.rule.maxChainDepth.desc": "最大连锁更新深度",
   "carpet.rule.infinitelyVault.desc": "玩家可以无限开宝库",
@@ -24,6 +25,7 @@
   "carpet.rule.showChainUpdateDepth.desc": "当更新链的深度达到10万时会在聊天栏显示",
   "carpet.rule.copperGolemFix.desc": "byd铜傀儡下落到一半就变成雕像(",
   "carpet.rule.blockEntitySwapReintroduced.desc": "重新引入方块实体替换",
+  "carpet.rule.endPortalFrameCanBeMined.desc": "末地门框可以用镐子挖掘",
 
   "carpet.rule.infinitelyVault.extra.0": "只对该玩家未开启过的宝库有效",
   "carpet.rule.infinitelyTotem.extra.0": "不会消耗图腾",

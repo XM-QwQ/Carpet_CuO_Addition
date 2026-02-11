@@ -10,12 +10,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 //#if MC >= 1.21.5
 //$$@Mixin(WorldChunk.class)
-//$$public class WorldChunkMixin {
+//$$public abstract class WorldChunkMixin {
 //$$}
 //#endif
 //#if MC <= 1.21.4
 @Mixin(WorldChunk.class)
-public class WorldChunkMixin {
+public abstract class WorldChunkMixin {
     @Redirect(
             method = "setBlockState",
             at = @At(
@@ -24,11 +24,8 @@ public class WorldChunkMixin {
             )
     )
     private boolean skipBlockEntityChecks(BlockEntity instance, BlockState state){
-        if (Carpet_CuOSettings.blockEntitySwapReintroduced){
-            return true;
-        }else {
-            return instance.supports(state);
-        }
+        if (Carpet_CuOSettings.blockEntitySwapReintroduced)return true;
+        else return instance.supports(state);
     }
 }
 //#endif
