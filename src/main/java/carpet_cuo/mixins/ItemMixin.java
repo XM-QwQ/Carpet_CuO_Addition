@@ -1,4 +1,4 @@
-package carpet_cuo.mixins.EndPortalFrameCanBeMinedMixin;
+package carpet_cuo.mixins;
 
 import carpet_cuo.Carpet_CuOSettings;
 import net.minecraft.block.BlockState;
@@ -20,7 +20,7 @@ public abstract class ItemMixin {
             cancellable = true
     )
     private void miningSpeed(ItemStack stack, BlockState state, CallbackInfoReturnable<Float> cir) {
-        if (Carpet_CuOSettings.endPortalFrameCanBeMined && state.getBlock() == Blocks.END_PORTAL_FRAME) {
+        if ((Carpet_CuOSettings.endPortalFrameCanBeMined || Carpet_CuOSettings.bedrockCanBeMined) && (state.isOf(Blocks.END_PORTAL_FRAME) || state.isOf(Blocks.BEDROCK))) {
             ToolComponent tool = stack.get(DataComponentTypes.TOOL);
             if (tool == null) return;
             cir.setReturnValue(tool.getSpeed(Blocks.OBSIDIAN.getDefaultState()));

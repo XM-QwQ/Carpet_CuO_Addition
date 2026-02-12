@@ -1,4 +1,4 @@
-package carpet_cuo.mixins.EndPortalFrameCanBeMinedMixin;
+package carpet_cuo.mixins;
 
 import carpet_cuo.wheel.BlockHardnessModifiers;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;

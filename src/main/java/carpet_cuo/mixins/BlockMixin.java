@@ -1,9 +1,9 @@
-package carpet_cuo.mixins.EndPortalFrameCanBeMinedMixin;
+package carpet_cuo.mixins;
 
 import carpet_cuo.Carpet_CuOSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.EndPortalFrameBlock;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -23,8 +23,15 @@ public abstract class BlockMixin {
             at = @At("HEAD")
     )
     private void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfoReturnable<BlockState> cir) {
-        if (Carpet_CuOSettings.endPortalFrameCanBeMined && !world.isClient() && state.getBlock() instanceof EndPortalFrameBlock && !player.isCreative() && TheRightTool(player)) {
+        if (Carpet_CuOSettings.endPortalFrameCanBeMined && !world.isClient() && state.isOf(Blocks.END_PORTAL_FRAME) && !player.isCreative() && TheRightTool(player)) {
             ItemStack portalFrameStack = new ItemStack(Items.END_PORTAL_FRAME);
+            ItemEntity itemEntity = new ItemEntity(
+                    world, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                    portalFrameStack
+            );
+            world.spawnEntity(itemEntity);
+        } else if (Carpet_CuOSettings.bedrockCanBeMined && !world.isClient() && state.isOf(Blocks.BEDROCK) && !player.isCreative() && TheRightTool(player)) {
+            ItemStack portalFrameStack = new ItemStack(Items.BEDROCK);
             ItemEntity itemEntity = new ItemEntity(
                     world, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                     portalFrameStack

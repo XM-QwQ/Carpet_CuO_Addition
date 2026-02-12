@@ -58,4 +58,7 @@ public class Carpet_CuOSettings {
 
     @Rule(categories = {CuO,CREATIVE,NOT_VANILLA})
     public static boolean endPortalFrameCanBeMined = false;
+
+    @Rule(categories = {CuO,CREATIVE,NOT_VANILLA})
+    public static boolean bedrockCanBeMined = false;
 }

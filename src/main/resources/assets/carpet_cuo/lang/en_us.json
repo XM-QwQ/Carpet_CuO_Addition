@@ -11,6 +11,7 @@
   "carpet.rule.copperGolemFix.name": "copperGolemFix",
   "carpet.rule.blockEntitySwapReintroduced.name": "blockEntitySwapReintroduced",
   "carpet.rule.endPortalFrameCanBeMined.name": "endPortalFrameCanBeMined",
+  "carpet.rule.bedrockCanBeMined.name": "bedrockCanBeMined",
 
   "carpet.rule.maxChainDepth.desc": "max chain depth",
   "carpet.rule.infinitelyVault.desc": "Players can open an unlimited number of vaults",
@@ -24,6 +25,7 @@
   "carpet.rule.copperGolemFix.desc": "Copper golems do not turn into statues in the air",
   "carpet.rule.blockEntitySwapReintroduced.desc": "Block entity swap reintroduced",
   "carpet.rule.endPortalFrameCanBeMined.desc": "The end portal frame can be mined",
+  "carpet.rule.bedrockCanBeMined.desc": "Bedrock Can Be Mined",
 
   "carpet.rule.infinitelyVault.extra.0": "This only applies to vaults the  player has not yet opened",
   "carpet.rule.infinitelyTotem.extra.0": "Using a totem is not consumed",
