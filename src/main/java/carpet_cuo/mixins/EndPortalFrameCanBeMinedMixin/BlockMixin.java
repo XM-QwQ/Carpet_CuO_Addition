@@ -11,6 +11,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -22,16 +23,18 @@ public abstract class BlockMixin {
             at = @At("HEAD")
     )
     private void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfoReturnable<BlockState> cir) {
-        if (Carpet_CuOSettings.endPortalFrameCanBeMined && !world.isClient() && state.getBlock() instanceof EndPortalFrameBlock && !player.isCreative()) {
+        if (Carpet_CuOSettings.endPortalFrameCanBeMined && !world.isClient() && state.getBlock() instanceof EndPortalFrameBlock && !player.isCreative() && TheRightTool(player)) {
             ItemStack portalFrameStack = new ItemStack(Items.END_PORTAL_FRAME);
             ItemEntity itemEntity = new ItemEntity(
-                    world,
-                    pos.getX() + 0.5,
-                    pos.getY() + 0.5,
-                    pos.getZ() + 0.5,
+                    world, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                     portalFrameStack
             );
             world.spawnEntity(itemEntity);
         }
+    }
+    @Unique
+    private boolean TheRightTool(PlayerEntity player){
+        ItemStack itemStack = player.getMainHandStack();
+        return itemStack.isOf(Items.DIAMOND_PICKAXE) || itemStack.isOf(Items.NETHERITE_PICKAXE);
     }
 }

@@ -12,6 +12,7 @@
     "EndPortalFrameCanBeMinedMixin.AbstractBlockStateMixin",
     "EndPortalFrameCanBeMinedMixin.BlockMixin",
     "EndPortalFrameCanBeMinedMixin.ItemMixin",
+    "EndPortalFrameCanBeMinedMixin.PistonBlockMixin",
     "InfinitelyTotemMixin.LivingEntityMixin",
     "InfinitelyVaultMixin.VaultServerDateMixin",
     "MaxUpdateDepthMixin.WorldMixin",

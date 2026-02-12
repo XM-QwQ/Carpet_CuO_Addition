@@ -79,7 +79,7 @@
 * 默认值：`false`
 * 选项：`false`，`true`
 ### (末地门框架可以被挖掘)endPortalFrameCanBeMined
-可以用镐子挖掘末地传送门框来获取物品形式的末地门框
+可以挖掘末地传送门框来获取物品形式的末地门框
 
 * 默认值：`false`
 * 选项：`false`，`true`
