@@ -84,14 +84,6 @@ if (System.getenv("BUILD_RELEASE") != "true") {
 String fullModVersion = project.mod_version + modVersionSuffix
 String fullProjectVersion, fullArtifactVersion
 
-// Example version values:
-//   project.mod_version     1.0.3                      (the base mod version)
-//   modVersionSuffix        +build.88                  (use github action build number if possible)
-//   artifactVersionSuffix   -SNAPSHOT
-//   fullModVersion          1.0.3+build.88             (the actual mod version to use in the mod)
-//   fullProjectVersion      v1.0.3-mc1.15.2+build.88   (in build output jar name)
-//   fullArtifactVersion     1.0.3-mc1.15.2-SNAPSHOT    (maven artifact version)
-
 group = project.maven_group
 base.archivesName = project.archives_base_name
 fullProjectVersion = 'v' + project.mod_version + '-mc' + project.minecraft_version + modVersionSuffix
