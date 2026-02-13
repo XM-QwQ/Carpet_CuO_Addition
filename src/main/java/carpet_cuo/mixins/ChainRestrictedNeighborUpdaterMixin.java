@@ -31,7 +31,11 @@ public abstract class ChainRestrictedNeighborUpdaterMixin {
 
     @Inject(
             method = "runQueuedUpdates",
-            at = @At(value = "INVOKE", target = "Ljava/util/List;clear()V", ordinal = 1)
+            at = @At(
+                    value = "INVOKE",
+                    target = "Ljava/util/List;clear()V",
+                    ordinal = 1
+            )
     )
     private void depth(CallbackInfo ci) {
         if (Carpet_CuOSettings.showChainUpdateDepth && MinecraftClient.getInstance().player != null && depth>100000) {
