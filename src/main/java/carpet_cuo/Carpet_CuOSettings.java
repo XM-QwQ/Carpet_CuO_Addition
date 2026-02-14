@@ -61,4 +61,7 @@ public class Carpet_CuOSettings {
 
     @Rule(categories = {CuO,CREATIVE,NOT_VANILLA})
     public static boolean bedrockCanBeMined = false;
+
+    @Rule(categories = {CuO,EXPERIMENTAL,FEATURE})
+    public static boolean piglinTradeInstantly = false;
 }

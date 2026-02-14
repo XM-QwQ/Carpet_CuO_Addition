@@ -14,6 +14,7 @@
   "carpet.rule.blockEntitySwapReintroduced.name": "重新引入方块实体替换",
   "carpet.rule.endPortalFrameCanBeMined.name": "可挖掘末地传送门框",
   "carpet.rule.bedrockCanBeMined.name": "可挖掘基岩",
+  "carpet.rule.piglinTradeInstantly.name": "猪灵交易无硬控时间",
 
   "carpet.rule.maxChainDepth.desc": "最大连锁更新深度",
   "carpet.rule.infinitelyVault.desc": "玩家可以无限开宝库",
@@ -28,6 +29,7 @@
   "carpet.rule.blockEntitySwapReintroduced.desc": "重新引入方块实体替换",
   "carpet.rule.endPortalFrameCanBeMined.desc": "末地门框可以用镐子挖掘并掉落",
   "carpet.rule.bedrockCanBeMined.desc": "基岩可以被镐子挖掘并掉落",
+  "carpet.rule.piglinTradeInstantly.desc": "去掉了猪灵交易的6s硬控，可以1gt交易一次",
 
   "carpet.rule.infinitelyVault.extra.0": "只对该玩家未开启过的宝库有效",
   "carpet.rule.infinitelyTotem.extra.0": "不会消耗图腾",

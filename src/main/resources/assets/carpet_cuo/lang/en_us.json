@@ -12,6 +12,7 @@
   "carpet.rule.blockEntitySwapReintroduced.name": "blockEntitySwapReintroduced",
   "carpet.rule.endPortalFrameCanBeMined.name": "endPortalFrameCanBeMined",
   "carpet.rule.bedrockCanBeMined.name": "bedrockCanBeMined",
+  "carpet.rule.piglinTradeInstantly.name": "piglinTradeInstantly",
 
   "carpet.rule.maxChainDepth.desc": "max chain depth",
   "carpet.rule.infinitelyVault.desc": "Players can open vaults an unlimited number of times",
@@ -26,6 +27,7 @@
   "carpet.rule.blockEntitySwapReintroduced.desc": "Reintroduces the block entity swap functionality",
   "carpet.rule.endPortalFrameCanBeMined.desc": "The end portal frame can be mined",
   "carpet.rule.bedrockCanBeMined.desc": "Bedrock Can Be Mined",
+  "carpet.rule.piglinTradeInstantly.desc": "Piglin trading has no 6s cooldown",
 
   "carpet.rule.infinitelyVault.extra.0": "This only applies to vaults that the player has not yet opened",
   "carpet.rule.infinitelyTotem.extra.0": "When a totem is used,it is not consumed",
