@@ -51,10 +51,8 @@ public class Carpet_CuOSettings {
     //$$ public static boolean copperGolemFix = false;
     //#endif
 
-    //#if MC <= 12104
     @Rule(categories = {CuO,CREATIVE,FEATURE})
     public static boolean blockEntitySwapReintroduced = false;
-    //#endif
 
     @Rule(categories = {CuO,CREATIVE,NOT_VANILLA})
     public static boolean endPortalFrameCanBeMined = false;

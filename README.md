@@ -92,11 +92,10 @@
 * 选项：`false`，`true`
 * 分类：`CuO`，`CREATIVE`，`FEATURE`，`BUGFIX`
 ### (重新引入方块实体替换)blockEntitySwapReintroduced
-版本：1.21.4-
 
 开启后加载区块时不会再检查方块实体是否合法，放置一个带方块实体的方块时也不会再删除原来坐标的方块实体
 
-1.21.5之后破坏大部分方块会先删除方块实体再放出更新，这导致无法保存方块实体
+1.21.5之后破坏大部分方块会先删除方块实体再放出更新，这导致无法保存方块实体，不过可以先在低版本完成后再升级版本
 
 * 类型：`boolean`
 * 默认值：`false`
@@ -116,3 +115,10 @@
 * 默认值：`false`
 * 选项：`false`，`true`
 * 分类：`CuO`，`CREATIVE`，`NOT_VANILLA`
+### (猪灵交易无硬控时间)piglinTradeInstantly
+移除了猪灵端详的时间，可以1gt交易一次
+
+* 类型：`boolean`
+* 默认值：`false`
+* 选项：`false`，`true`
+* 分类：`CuO`，`EXPERIMENTAL`，`FEATURE`

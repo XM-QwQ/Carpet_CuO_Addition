@@ -8,12 +8,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-//#if MC >= 1.21.5
-//$$@Mixin(WorldChunk.class)
-//$$public abstract class WorldChunkMixin {
-//$$}
-//#endif
-//#if MC <= 1.21.4
 @Mixin(WorldChunk.class)
 public abstract class WorldChunkMixin {
     @Redirect(
@@ -28,4 +22,3 @@ public abstract class WorldChunkMixin {
         else return instance.supports(state);
     }
 }
-//#endif

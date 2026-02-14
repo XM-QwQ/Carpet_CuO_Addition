@@ -7,12 +7,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-//#if MC >= 1.21.5
-//$$@Mixin(BlockEntity.class)
-//$$public abstract class BlockEntityMixin {
-//$$}
-//#endif
-//#if MC <= 1.21.4
 @Mixin(BlockEntity.class)
 public abstract class BlockEntityMixin {
     @Inject(
@@ -24,4 +18,3 @@ public abstract class BlockEntityMixin {
         if (Carpet_CuOSettings.blockEntitySwapReintroduced)ci.cancel();
     }
 }
-//#endif
